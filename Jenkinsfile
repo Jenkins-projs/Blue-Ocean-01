@@ -10,7 +10,7 @@ pipeline {
 
     stage('Stage-2') {
       steps {
-        writeJSON(file: 'model.json', json: 'model')
+        echo 'from stage-2'
       }
     }
 
