@@ -68,6 +68,12 @@ pipeline {
           }
         }
 
+        stage('stage -3-3') {
+          steps {
+            echo 'stage 3-3'
+          }
+        }
+
       }
     }
 
