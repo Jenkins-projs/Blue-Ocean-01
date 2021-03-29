@@ -62,6 +62,12 @@ pipeline {
           }
         }
 
+        stage('stage 3-2') {
+          steps {
+            echo 'stage 3-2'
+          }
+        }
+
       }
     }
 
