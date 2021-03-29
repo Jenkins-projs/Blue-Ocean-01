@@ -49,8 +49,19 @@ pipeline {
     }
 
     stage('stage 3') {
-      steps {
-        input(message: 'Do you want to continue ?', id: '1', submitter: '3', submitterParameter: '4')
+      parallel {
+        stage('stage 3') {
+          steps {
+            input(message: 'Do you want to continue ?', id: '1', submitter: '3', submitterParameter: '4')
+          }
+        }
+
+        stage('stage 3-1') {
+          steps {
+            echo 'stage 3-1'
+          }
+        }
+
       }
     }
 
