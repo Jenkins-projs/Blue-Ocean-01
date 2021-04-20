@@ -74,6 +74,12 @@ pipeline {
           }
         }
 
+        stage('stage-3-5') {
+          steps {
+            echo 'one more msg'
+          }
+        }
+
       }
     }
 
