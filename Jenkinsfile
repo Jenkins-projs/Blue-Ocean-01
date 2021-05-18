@@ -6,7 +6,7 @@ pipeline {
         stage('Stage-1') {
           steps {
             echo 'hello msg from blue ocean stage-1 edited from git'
-            echo 'another msg from stage-1' env.GIT_BRANCH
+            println "yes:"+env.GIT_BRANCH
           }
         }
 
